@@ -139,8 +139,8 @@ int main() {
         }
 
         default:
-            cout << "Pilihan tidak ditemukan. Silahkan masukkan pilihan (1-5)" << endl;
-
+            cout << "Pilihan tidak ditemukan" << endl;
+            break;
         }
     }
 }
