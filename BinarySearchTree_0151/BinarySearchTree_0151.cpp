@@ -37,10 +37,16 @@ public:
             ROOT = newNode; // Mark the new node as ROOT
             return;         // Exit
         }
+
         if (element < parent->info) {   //If  the value in the data field of the new node is less than that of the.....
-            parent->leftchild = newNode;    // Make the left child of the parent poin to the ne node
+            parent->leftchild = newNode;    // Make the left child of the parent poin to the new node
+        }
+
+        if (element < parent->info) {   // if the value in the data field of the new node is greater than that...
+            parent->rightchild = newNode;   //Make the right child of the parent poin to the new node
 
         }
+
     }
 };
 int main()
