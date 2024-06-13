@@ -49,8 +49,31 @@ public:
 
     void search(string element, Node*& parent, Node*& currentNode) {
         // This function searches the currentNode of the specified Node as well as the current Node of its parent
+        currentNode = ROOT;
+        parent = nullptr;
+        while ((currentNode != nullptr) && (currentNode->info != element)) {
+            parent = currentNode;
+            if (element < currentNode->info)
+                currentNode = currentNode->leftchild;
+            else
+                currentNode = currentNode->rightchild;
+        }
+    }
+
+    void inorder(Node* ptr) {
+        if (ROOT == nullptr) {
+            cout << "Tree is empty" << endl;
+        }
+
+        if (ptr != nullptr) {
+            inorder(ptr->leftchild);
+            cout << ptr->info << " ";
+            inorder(ptr->rightchild);
+        }
     }
 };
+
+
 int main()
 {
     std::cout << "Hello World!\n";
