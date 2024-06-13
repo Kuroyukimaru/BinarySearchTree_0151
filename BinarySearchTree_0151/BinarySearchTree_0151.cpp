@@ -33,7 +33,10 @@ public:
         Node* currentNode = nullptr;
         search(element, parent, currentNode); // Locate the node which will be the parent of the node to be insearch
 
-        if (parent == nullptr) // If the parent is Null (Tree is empty
+        if (parent == nullptr) { // If the parent is Null (Tree is empty
+            ROOT = newNode; // Mark the new node as ROOT
+            return;         // Exit
+        }
     }
 };
 int main()
