@@ -15,6 +15,10 @@ public:
         rightchild = r;
     }
 };
+
+class BinaryTree {
+
+};
 int main()
 {
     std::cout << "Hello World!\n";
