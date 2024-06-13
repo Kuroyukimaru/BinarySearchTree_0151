@@ -83,6 +83,17 @@ public:
             preorder(ptr->rightchild);
         }
     }
+
+    void posorder(Node* ptr) {
+        // Performs the postorder travelsal of the tree
+        if (ROOT == nullptr) {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+        preorder(ptr->leftchild);
+        preorder(ptr->rightchild);
+        cout << ptr->info << " ";
+    }
 };
 
 
