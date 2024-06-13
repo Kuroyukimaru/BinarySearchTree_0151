@@ -32,6 +32,8 @@ public:
         Node* parent = nullptr;
         Node* currentNode = nullptr;
         search(element, parent, currentNode); // Locate the node which will be the parent of the node to be insearch
+
+        if (parent == nullptr) // If the parent is Null (Tree is empty
     }
 };
 int main()
